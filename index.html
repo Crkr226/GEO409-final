@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Presentation</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Set margin/padding to fit border in box model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Define styles on body (and all descendants) */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: rgb(32, 32, 32);
+      background-color: rgb(178, 221, 172);
+    }
+
+    /* Define styles for the headings */
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 10px 0;
+      padding: 0;
+      color: rgb(0, 0, 0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Define styles for the paragraph */
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+
+    a:link,
+    a:visited {
+      color: rgb(12, 73, 34);
+    }
+
+    a:hover {
+      color: rgb(86, 86, 86);
+      text-decoration: none;
+    }
+
+    section {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    footer {
+      width: 80%;
+      margin: 0 auto;
+      color: rgb(100, 100, 100);
+    }
+
+    iframe {
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+      color: rgb(100, 100, 100);
+    }
+
+    .title {
+      text-align: left;
+      margin: 20px;
+    }
+
+    /* Set up a container for the two columns */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Define styles for the left column */
+    .left-column {
+      flex-basis: 40%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Define styles for the right column */
+    .right-column {
+      flex-basis: 55%;
+      background-color: rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Round image corners for images inside the right-column */
+    .right-column img {
+      border-radius: 10px;
+    }
+
+    /* Media query for small screens */
+    /* For screens up to 768px, apply these rules. */
+    @media (max-width: 768px) {
+
+      /* Change to a single column layout */
+      .container {
+        flex-direction: column;
+      }
+
+      /* Set full width for both columns */
+      .left-column,
+      .right-column {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <!-- 💡💡💡 Cesium map: paste embed code below -->
+    <iframe title="Highbridge slideshow" width="100%" height="776"
+      src="https://ion.cesium.com/stories/viewer/?id=9fea18d4-258b-4e2e-aec3-576ae580777d" frameborder="0"
+      allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+    </iframe>
+    <!-- 💡💡💡 Cesium map: paste embed code above -->
+    <p class="caption">Caption for Cesium slideshow</p>
+    <div class="title">
+      <h1>A closer look at a Pallisades hallmark</h1>
+      <h2>Highbridge, KY, May 2023</h2>
+    </div>
+    <div class="container">
+      <div class="left-column">
+        <h3>Highbridge - The First Cantilever Bridge</h3>
+        <p>
+          Built in 1876, Highbridge was the first Cantilever bridge in North America. 
+          It was built in the Kentucky River pallisades, carrying both passengers and freight.
+        </p>
+
+        <p>
+          The pupose of these maps was to show the natural beauty of Highbridge. The first map gives the viewer a 3D representation of the Area. The second and third show the differences in tree cover and general vegetation.
+        </p>
+
+        <p>
+          Visualizations created from lidar data provided by
+          <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in ArcGIS Pro. Additional sources of information from National Agriculture Imagery Program.
+          
+        </p>
+
+        <p>
+          Page and visualizations created by Chandler Krampe for GEO 409, Department of
+          Geography, University of Kentucky. Spring 2023.
+        </p>
+
+
+      </div>
+      <div class="right-column">
+        <h3>Trees vs. General Vegetation </h3>
+        <img src="images/ShadedRelief.jpg" alt="Something about this map" width="100%" />
+        <p class="caption">This map uses a hillshade and NDVI imagery to show general vegetation in the area surrounding Highbridge</p>
+        <img src="images/TreeCanopy.jpg" alt="Something about this map" width="100%" />
+        <p class="caption">This map shows the difference in tree cover and general vegetation when compared to the map above</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <hr />
+    <img src="logo-color-400px.png" alt="UKy Arts and Sciences  " width="300px">
+
+  </footer>
+</body>
+
+</html>
